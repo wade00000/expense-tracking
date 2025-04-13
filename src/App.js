@@ -10,10 +10,14 @@ function App() {
     {category: 'Food' ,description: 'Groceries', amount: 50, },
     {category: 'Transport' ,description: 'Transport', amount: 20, }
   ])
+
+  const handleAddExpense = (newExpense) =>{
+    setExpenses([...expenses,newExpense])
+  }
   return (
     <div className="App">
      <Search/>
-     <Form/>
+     <Form onAddExpense={handleAddExpense}/>
      <Table expenses = {expenses}/>
     </div>
   );

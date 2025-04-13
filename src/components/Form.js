@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 
-function Form() {
+function Form({onAddExpense}) {
     const [category, setCategory] = useState("");
     const [description, setDescription] = useState("");
     const [amount, setAmount] = useState("");
@@ -12,6 +12,13 @@ function Form() {
             description,
             amount: parseFloat(amount)
           });
+
+        onAddExpense({
+                category,
+                description,
+                amount: parseFloat(amount)
+              
+        })
       
           // form cleared
           setCategory("");
