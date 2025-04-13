@@ -4,7 +4,7 @@ function Table({expenses}) {
    
     console.log(expenses)
     return (
-    <div>
+    <div className="table-container">
 
 <table>
 

@@ -1,7 +1,7 @@
 import React from "react"
 function Search({search,onSearchChange}) {
     return (
-    <div>
+    <div  className="search-container" >
         <input 
         type = "text"
         placeholder="Search expenses..."

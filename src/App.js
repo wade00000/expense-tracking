@@ -25,11 +25,25 @@ function App() {
   });
 
   return (
-    <div className="App">
-     <Search search = {search} onSearchChange={setSearch}/>
-     <Form onAddExpense={handleAddExpense}/>
-     <Table expenses = {filteredExpenses}/>
+    <div className="app-container">
+      <header className="header">
+        <h1 className='logo-title'>Expense Tracker   </h1>
+        <img src="/apple-touch-icon.png" className ="logo-icon"/>
+        <Search search = {search} onSearchChange={setSearch}/>
+      </header>
+     
+     <div className='main-content'>
+        <div className='form-container'>
+          <Form onAddExpense={handleAddExpense}/>
+        </div>
+        <div className='table-container'>
+          <Table expenses = {filteredExpenses}/>
+      </div> 
     </div>
+   </div>
+     
+      
+      
   );
 }
 

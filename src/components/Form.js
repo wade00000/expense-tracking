@@ -34,6 +34,7 @@ function Form({onAddExpense}) {
             id = "category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
+            className="form-input"
         />
         <br/>
 
@@ -42,6 +43,7 @@ function Form({onAddExpense}) {
             id = "description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            className="form-input"
         />
         <br/>
 
@@ -51,10 +53,11 @@ function Form({onAddExpense}) {
             type = "number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            className="form-input"
         />
         <br/>
 
-        <button id = "submit">submit</button>
+        <button id = "submit" className="form-button">submit</button>
         </form>
      
     </div>
