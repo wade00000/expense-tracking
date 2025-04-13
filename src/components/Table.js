@@ -1,12 +1,13 @@
 import React from "react"
 
 function Table({expenses}) {
+   
     console.log(expenses)
     return (
     <div>
 
 <table>
-    
+
    <thead>
     <tr>
         <th>Category</th>

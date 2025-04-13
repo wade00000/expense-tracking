@@ -6,6 +6,7 @@ import Table from './components/Table';
 import React, {useState} from 'react'
 
 function App() {
+  const [search,setSearch] = useState("")
   const [expenses,setExpenses] = useState([
     {category: 'Food' ,description: 'Groceries', amount: 50, },
     {category: 'Transport' ,description: 'Transport', amount: 20, }
@@ -14,11 +15,20 @@ function App() {
   const handleAddExpense = (newExpense) =>{
     setExpenses([...expenses,newExpense])
   }
+
+  const filteredExpenses = expenses.filter((expense) => {
+    const searched = search.toLowerCase()
+    return (
+      expense.description.toLowerCase().includes(searched) ||
+      expense.category.toLowerCase().includes(searched)
+    );
+  });
+
   return (
     <div className="App">
-     <Search/>
+     <Search search = {search} onSearchChange={setSearch}/>
      <Form onAddExpense={handleAddExpense}/>
-     <Table expenses = {expenses}/>
+     <Table expenses = {filteredExpenses}/>
     </div>
   );
 }
