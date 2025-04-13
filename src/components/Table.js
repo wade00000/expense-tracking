@@ -12,7 +12,7 @@ function Table({expenses}) {
     <tr>
         <th>Category</th>
         <th>Description</th>
-        <th>Amount</th>
+        <th>Amount(Ksh.)</th>
     </tr>
    </thead>
 
