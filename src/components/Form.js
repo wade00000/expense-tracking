@@ -37,6 +37,7 @@ function Form({onAddExpense}) {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="form-input"
+            required
         />
         <br/>
 
@@ -46,6 +47,7 @@ function Form({onAddExpense}) {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             className="form-input"
+            required
         />
         <br/>
 
@@ -56,6 +58,7 @@ function Form({onAddExpense}) {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className="form-input"
+            required
         />
         <br/>
 
