@@ -20,15 +20,17 @@ function Form({onAddExpense}) {
               
         })
       
-          // form cleared
-          setCategory("");
-          setDescription("");
-          setAmount("")
-    }
+        // form cleared
+        setCategory("");
+        setDescription("");
+        setAmount("")
+  }
+
     return(
     <div>
 
         <form onSubmit={handleSubmit}>
+            
         <label for = "category">Category :</label>
         <input 
             id = "category"

@@ -43,6 +43,7 @@ function App() {
         <div className='table-container'>
           <Table expenses = {filteredExpenses}/>
           <br></br>
+          
           <strong>
            <small>*probably a lie</small>
           </strong>
